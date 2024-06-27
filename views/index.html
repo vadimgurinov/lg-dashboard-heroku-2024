@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lionsoul Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/prices">Prices</a>
+        <a href="/edit">Edit</a>
+    </nav>
+    
+    <div id="logo">
+        <img src="/assets/logo.png" alt="Lionsoul Global">
+    </div>
+    
+    <main>
+        <div id="grid-container">
+            <div id="aum">
+                <h2>X</h2>
+                <p>AUM</p>
+            </div>
+            <div id="clients">
+                <h2>X</h2>
+                <p>Clients</p>
+            </div>
+            <div id="product1">
+                <h2>X</h2>
+                <p>SMA Products</p>
+            </div>
+            <div id="product2">
+                <h2>X</h2>
+                <p>Fund Products</p>
+            </div>
+        </div>
+        <div id="coin-container"></div> <!-- Dynamic coin container -->
+    </main>
+
+    <script src="/scripts/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/get-dashboard-data')
+            .then(response => response.json())
+            .then(data => {
+                document.querySelector('#aum h2').textContent = data.aum || '100M';
+                document.querySelector('#clients h2').textContent = data.clients || '250';
+                document.querySelector('#product1 h2').textContent = data.product1 || '5';
+                document.querySelector('#product2 h2').textContent = data.product2 || '3';
+            })
+            .catch(error => console.error('Failed to load dashboard data:', error));
+        });
+    </script>
+</body>
+</html>

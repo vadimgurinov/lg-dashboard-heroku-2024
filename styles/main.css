@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(0, 44, 50);
+    ;
+}
+
+nav {
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+nav a {
+    color: rgb(92, 179, 152);
+    text-decoration: none;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+#logo {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo > img {
+    height: 100px;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+    color: black;
+    font-size: 64px;
+    padding: 0px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 200px;
+    row-gap: 80px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+#grid-container > div {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#grid-container > div > h2 {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 120px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#grid-container > div > h3 {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 120px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#grid-container > div > p {
+    font-weight: bold;
+    color: rgb(92, 179, 152);
+    font-size: 40px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#aum {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    gap: 10px;
+
+}
+
+#coin-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 4000px;
+    height: 200px; 
+    white-space: nowrap; /* Prevents content from wrapping */
+    margin: 20px auto; /* Centering the container */
+    margin-top: 100px;
+}
+
+#coin-container > div {
+    display: flex; 
+    flex-direction: column; 
+    min-width: 250px;
+    max-width: 250px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Slight transparency for visibility */
+    margin-right: 20px; /* Space between entries */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+.coin-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    row-gap: 0px;
+    column-gap: 5px;
+    margin: 0px;
+    padding: 0px; 
+}
+
+.coin-header > h2 {
+    font-weight: bold;
+    color: rgb(92, 179, 152);
+    font-size: 40px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.coin-header > p {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 42px;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 10px;    
+
+}
+
+.coin-info {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    padding: 0px;
+}
+
+.coin-info > a {
+    margin: 5px;
+    color: rgb(223, 220, 214); 
+    font-size: 20px;
+}
+
+
